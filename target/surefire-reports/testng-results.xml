@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="47277" started-at="2022-08-17T16:46:06 IST" finished-at="2022-08-17T16:46:53 IST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="47277" started-at="2022-08-17T16:46:06 IST" finished-at="2022-08-17T16:46:53 IST">
+      <class name="com.mindtree.SmartExecutionTest.AppTest">
+        <test-method status="PASS" signature="beforeSuit()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="beforeSuit" is-config="true" duration-ms="121" started-at="2022-08-17T16:46:05 IST" finished-at="2022-08-17T16:46:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuit -->
+        <test-method status="PASS" signature="setTest()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="setTest" is-config="true" duration-ms="40143" started-at="2022-08-17T16:46:06 IST" finished-at="2022-08-17T16:46:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setTest -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2022-08-17T16:46:46 IST" finished-at="2022-08-17T16:46:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mindtree.SmartExecutionTest.AppTest.login()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="login" duration-ms="3975" started-at="2022-08-17T16:46:46 IST" finished-at="2022-08-17T16:46:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="afterMethod" is-config="true" duration-ms="4" started-at="2022-08-17T16:46:50 IST" finished-at="2022-08-17T16:46:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="downTest()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="downTest" is-config="true" duration-ms="3018" started-at="2022-08-17T16:46:50 IST" finished-at="2022-08-17T16:46:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.mindtree.SmartExecutionTest.AppTest@31610302]" name="afterSuite" is-config="true" duration-ms="192" started-at="2022-08-17T16:46:53 IST" finished-at="2022-08-17T16:46:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.mindtree.SmartExecutionTest.AppTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
