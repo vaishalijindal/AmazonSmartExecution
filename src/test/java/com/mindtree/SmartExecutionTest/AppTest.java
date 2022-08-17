@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -21,6 +22,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.DriverManagerType;
 
 public class AppTest {
 
@@ -44,10 +46,10 @@ public class AppTest {
 
 	@BeforeTest
 	public void setTest() {
+		WebDriverManager.getInstance(DriverManagerType.CHROME).proxy("10.252.0.180:8085").setup();
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://www.amazon.in/");
-		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
@@ -55,16 +57,24 @@ public class AppTest {
 	public void login() {
 
 		System.out.println("print from test");
-
-		WebElement element = driver.findElement(By.xpath("//a[@id = 'nav-link-accountList']"));
-		Actions action = new Actions(driver);
-		action.click(element).perform();
-		driver.findElement(By.xpath("//input[@id = 'ap_email']")).sendKeys("vaishalijindal99@gmail.com");
-		driver.findElement(By.xpath("//input[@id = 'continue']")).click();
-		driver.findElement(By.xpath("//input[@id = 'ap_password']")).sendKeys("Tomphiker@25");
-		test.log(LogStatus.PASS, "Entering the credentaial");
-		driver.findElement(By.xpath("//input[@id = 'signInSubmit']")).click();
-		test.log(LogStatus.PASS, "Logged in");
+		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
+		test.log(LogStatus.PASS, "open google");
+		driver.findElement(By.name("q")).sendKeys("mindtree");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		test.log(LogStatus.PASS, "search mindtree");
+//		driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[1]/div[1]/div[2]/div/div[2]/input")).sendKeys("mindtree");
+//		Actions action = new Actions(driver);
+//		action.click(element).perform();
+//		WebElement element = driver.findElement(By.xpath("//a[@id = 'nav-link-accountList']"));
+//		Actions action = new Actions(driver);
+//		action.click(element).perform();
+//		driver.findElement(By.xpath("//input[@id = 'ap_email']")).sendKeys("vaishalijindal99@gmail.com");
+//		driver.findElement(By.xpath("//input[@id = 'continue']")).click();
+//		driver.findElement(By.xpath("//input[@id = 'ap_password']")).sendKeys("Tomphiker@25");
+//		test.log(LogStatus.PASS, "Entering the credentaial");
+//		driver.findElement(By.xpath("//input[@id = 'signInSubmit']")).click();
+//		test.log(LogStatus.PASS, "Logged in");
 	}
 
 	@AfterMethod
